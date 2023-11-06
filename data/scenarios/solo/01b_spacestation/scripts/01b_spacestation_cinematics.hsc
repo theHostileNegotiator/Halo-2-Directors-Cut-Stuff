@@ -693,11 +693,21 @@
 	(object_uses_cinematic_lighting cov_crowd_02_19 1)
 	)
 
+(script dormant x02_fov_03
+
+	(sleep 479)
+	(camera_set_field_of_view 30 0)
+	(camera_set_field_of_view 60 15)
+	(print "fov change: 30 -> 60 over 15 ticks")
+
+	)
+
 ; ---------------------------------------------------------------------
 
 (script static void x02_03_setup
 
 	(wake x02_foley_03)
+	(wake x02_fov_03)
 
 	(wake x02_0090_tar)
 	(wake x02_0100_der)
@@ -1125,6 +1135,21 @@
 
 	)
 
+(script dormant x02_fov_04b
+
+	(sleep 118)
+	(camera_set_field_of_view 40 0)
+	(print "fov change: 60 -> 40 over 0 ticks")
+
+	(sleep 66)
+	(camera_set_field_of_view 50 0)
+	(print "fov change: 40 -> 50 over 0 ticks")
+
+	(sleep 107)
+	(camera_set_field_of_view 60 0)
+	(print "fov change: 50 -> 60 over 0 ticks")
+	)
+
 ; ---------------------------------------------------------------------
 
 (script static void x02_04b_setup
@@ -1135,6 +1160,7 @@
 	(print "setting near clip distance to .043")
 
 	(wake x02_foley_04b)
+	(wake x02_fov_04b)
 
 	(wake x02_0170_lhd)
 	(wake x02_0180_cor)
@@ -1420,6 +1446,24 @@
 
 	)
 
+(script dormant x02_fov_06
+
+	(camera_set_field_of_view 50 0)
+	(print "fov change: 50 -> 60 over 0 ticks")
+
+	(sleep 70)
+	(camera_set_field_of_view 60 0)
+	(print "fov change: 50 -> 60 over 0 ticks")
+
+	(sleep 141)
+	(camera_set_field_of_view 50 0)
+	(print "fov change: 60 -> 50 over 0 ticks")
+
+	(sleep 130)
+	(camera_set_field_of_view 60 0)
+	(print "fov change: 50 -> 60 over 0 ticks")
+	)
+
 ; CROWDS --------------------------------------------------------------
 
 (script dormant x02_marine_crowd_03
@@ -1504,6 +1548,7 @@
 	(wake x02_0300_lhd)
 	(wake x02_0310_lhd)
 
+	(wake x02_fov_06)
 ;	(wake x05_fov_02)
 ;	(wake x04_01_dof_1)
 
@@ -1638,6 +1683,18 @@
 
 	)
 
+(script dormant x02_fov_07
+
+	(sleep 423)
+	(camera_set_field_of_view 50 0)
+	(print "fov change: 60 -> 50 over 30 ticks")
+
+	(sleep 131)
+	(camera_set_field_of_view 40 0)
+	(camera_set_field_of_view 60 60)
+	(print "fov change: 40 -> 60 over 60 ticks")
+	)
+
 ; ---------------------------------------------------------------------
 
 (script dormant backup_brand
@@ -1684,6 +1741,7 @@
 	(object_cinematic_lod branding_iron_02 true)
 
 	(wake x02_foley_07)
+	(wake x02_fov_07)
 
 	(wake x02_0320_der)
 
@@ -2678,6 +2736,16 @@
 
 	)
 
+(script dormant c01_outro_fov_02
+	(sleep 111)
+	(camera_set_field_of_view 50 0)
+	(print "fov change: 60 -> 50 over 0 ticks")
+
+	(sleep 129)
+	(camera_set_field_of_view 60 0)
+	(print "fov change: 50 -> 50 over 0 ticks")
+	)
+
 ; ---------------------------------------------------------------------
 
 (script static void c01_outro_02_setup
@@ -2689,6 +2757,7 @@
 	(object_cinematic_lod cairo_bridge true)
 
 	(wake c01_outro_foley_02)
+	(wake c01_outro_fov_02)
 
 	(wake c01_9080_mir)
 	(wake c01_9090_lhd)
@@ -3080,6 +3149,13 @@
 
 	)
 
+(script dormant c01_outro_fov_05
+
+	(sleep 561)
+	(camera_set_field_of_view 70 0)
+	(print "fov change: 60 -> 70 over 0 ticks")
+	)
+
 ; ---------------------------------------------------------------------
 
 (script dormant lever
@@ -3110,6 +3186,7 @@
 	(wake airlock)
 
 	(wake c01_outro_foley_05)
+	(wake c01_outro_fov_05)
 
 	(wake c01_9190_cor)
 	(wake c01_9200_cor)
@@ -3251,6 +3328,12 @@
 	(object_destroy outro_fleet)
 	)
 
+(script dormant c01_outro_fov_06
+	(sleep 98)
+	(camera_set_field_of_view 60 0)
+	(print "fov change: 70 -> 60 over 0 ticks")
+	)
+
 ; ---------------------------------------------------------------------
 
 (script static void c01_outro_06_setup
@@ -3260,6 +3343,7 @@
 
 	(wake c01_outro_music_06)
 	(wake c01_outro_foley_06)
+	(wake c01_outro_fov_06)
 
 	(wake c01_outro_shake_06_01)
 	(wake cinematic_lighting_bay_02)
@@ -3367,6 +3451,26 @@
 
 	)
 
+(script dormant c01_intro_shake_07
+
+	(sleep 106)
+	(print "shake")
+	(player_effect_set_max_rotation 0 0.35 0.35)
+	(player_effect_start .25 0)
+	
+	(sleep 338)
+	(player_effect_set_max_rotation 0 1.5 1.5)
+	(player_effect_start 0.25 0)
+	
+	(sleep 60)
+	(player_effect_set_max_rotation 0 0.35 0.35)
+	(player_effect_start .25 0)
+	
+	(sleep 420)
+	(player_effect_stop 0)
+	(print "stop shake")
+	)
+
 ; ---------------------------------------------------------------------
 
 (script static void c01_outro_07_setup
@@ -3394,6 +3498,7 @@
 	(object_set_function_variable pickle2 "flare" 0 1)
 
 	(wake c01_outro_foley_07)
+	(wake c01_intro_shake_07)
 
 	(wake effect_covenant_beams)
 	(wake effect_poa_explosions)
@@ -3832,6 +3937,21 @@
 
 	)
 
+(script dormant c01_outro_fov_10
+
+	(sleep 198)
+	(camera_set_field_of_view 25 0)
+	(print "fov change: 60 -> 25 over 0 ticks")
+	
+	(sleep 140)
+	(camera_set_field_of_view 50 0)
+	(print "fov change: 25 -> 50 over 0 ticks")
+
+	(sleep 164)
+	(camera_set_field_of_view 60 0)
+	(print "fov change: 50 -> 60 over 0 ticks")
+	)
+
 ; ---------------------------------------------------------------------
 
 (script dormant emotion_10
@@ -3865,6 +3985,7 @@
 	(object_cinematic_lod iac true)
 	(object_cinematic_lod iac_bridge_outro_02 true)
 
+	(wake c01_outro_fov_10)
 	(wake c01_outro_foley_10)
 
 	(wake c01_9220_jon)

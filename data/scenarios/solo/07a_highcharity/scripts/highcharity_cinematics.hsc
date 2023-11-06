@@ -1020,10 +1020,11 @@
 	(scenery_animation_start_relative tentacle_capture_03 objects\characters\gravemind\tentacle_capture_driven\x08\x08 "tc_driven03_11" anchor_x08)
 	(scenery_animation_start_relative tentacle_capture_04 objects\characters\gravemind\tentacle_capture_driven\x08\x08 "tc_driven04_11" anchor_x08)
 
-	(sleep (- (camera_time) 5))
-
-	(fade_out 0 0 0 5)
-	(sleep 5)
+	(sleep (- (camera_time) 25))
+	(fade_out 1 1 1 5)
+	(sleep 25)
+	;(fade_out 0 0 0 5)
+	;(sleep 5)
 
 	(wake x08_11_cleanup)
 
@@ -1412,7 +1413,7 @@
 
 	(sleep 166)
 	(print "change fov")
-	(camera_set_field_of_view 50 0)
+	(camera_set_field_of_view 60 0)
 
 	)
 
@@ -1596,6 +1597,15 @@
 
 ; EFFECTS & LIGHTING --------------------------------------------------
 
+(script dormant c07_intro_04_fov
+
+	(sleep 357)
+	(print "change fov")
+	(camera_set_field_of_view 40 38)
+	(time_code_reset)
+
+	)
+
 (script dormant effect_chief_teleport
 	(print "effect - teleport")
 	(effect_new_on_object_marker effects\gameplay\cinematic_teleport teleport "marker")
@@ -1630,6 +1640,7 @@
 	(render_lights_enable_cinematic_shadow 1 chief_intro head .4)
 
 	(wake c07_intro_foley_04)
+	(wake c07_intro_04_fov)
 
 	(wake c07_1050_pot)
 	(wake c07_1060_mas)

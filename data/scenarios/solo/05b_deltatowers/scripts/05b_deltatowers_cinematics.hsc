@@ -779,7 +779,7 @@
 (script dormant c05_outro_fov_01
 
 	(sleep 122)
-	(camera_set_field_of_view 7 0)
+	(camera_set_field_of_view 5 0)
 
 	)
 

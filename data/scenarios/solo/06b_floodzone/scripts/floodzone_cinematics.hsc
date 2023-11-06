@@ -115,6 +115,14 @@
 
 	)
 
+(script dormant c06_intra1_shake_01
+
+	(player_effect_set_max_rotation 0 1 1)
+	(player_effect_start .25 0)
+	(sleep 137)
+	(player_effect_stop 1.5)
+	)
+
 ; ---------------------------------------------------------------------
 
 (script static void c06_intra1_setup
@@ -151,6 +159,7 @@
 	(wake c06_intra1_dof_01)
 	(wake c06_intra1_dof_02)
 	(wake c06_intra1_cinematic_light)
+	(wake c06_intra1_shake_01)
 
 	)
 
@@ -401,6 +410,18 @@
 	)
 
 ; C06_INTRA_2 SCENE 03 ------------------------------------------------
+; EFFECTS & LIGHTING --------------------------------------------------
+(script dormant c06_intra2_fov_03
+	
+	(sleep 149)
+	(print "fov change: 60 -> 40 over 0 ticks")
+	(camera_set_field_of_view 40 0)
+	
+	(sleep 90)
+	(print "fov change: 40 -> 50 over 0 ticks")
+	(camera_set_field_of_view 50 0)
+	)
+
 ; SOUND ---------------------------------------------------------------
 
 (script dormant c06_intra2_foley_03
@@ -436,6 +457,7 @@
 	(object_uses_cinematic_lighting phantom_01 1)
 
 	(wake c06_intra2_foley_03)
+	(wake c06_intra2_fov_03)
 	(wake l06_0300_tar)
 	(wake l06_0310_tar)
 
@@ -908,6 +930,21 @@
 	)
 
 ; X07 SCENE 04 --------------------------------------------------------
+(script dormant x07_fov_04
+
+	(sleep 414)
+	(print "fov change: 60 -> 70 over 0 ticks")
+	(camera_set_field_of_view 70 0)
+
+	(print "fov change: 70 -> 50 over 60 ticks")
+	(camera_set_field_of_view 50 60)
+
+	(sleep 272)
+	(print "fov change: 50 -> 60 over 0 ticks")
+	(camera_set_field_of_view 60 0)
+
+	)
+
 ; SOUND ---------------------------------------------------------------
 
 (script dormant x07_foley_04
@@ -1041,6 +1078,7 @@
 	(object_cinematic_lod hammer true)
 
  	(wake x07_foley_04)
+ 	(wake x07_fov_04)
 
 	(wake x07_0110_mir)
 	(wake x07_0120_mir)
@@ -1093,6 +1131,18 @@
 	)
 
 ; X07 SCENE 05 --------------------------------------------------------
+(script dormant x07_fov_05
+
+	(sleep 219)
+	(print "fov change: 60 -> 50 over 0 ticks")
+	(camera_set_field_of_view 50 0)
+
+	(sleep 78)
+	(print "fov change: 50 -> 60 over 0 ticks")
+	(camera_set_field_of_view 60 0)
+
+	)
+
 ; SOUND ---------------------------------------------------------------
 
 (script dormant x07_foley_05
@@ -1142,6 +1192,7 @@
 (script static void x07_05_setup
 
 	(wake x07_foley_05)
+	(wake x07_fov_05)
 
 	(wake x07_0150_tar)
 	(wake x07_0160_tar)
@@ -1201,6 +1252,25 @@
 	)
 
 ; X07 SCENE 06 --------------------------------------------------------
+(script dormant x07_fov_06
+
+	(sleep 288)
+	(print "fov change: 60 -> 50 over 0 ticks")
+	(camera_set_field_of_view 50 0)
+
+	(print "fov change: 50 -> 70 over 63 ticks")
+	(camera_set_field_of_view 70 63)
+
+	(sleep 91)
+	(print "fov change: 70 -> 60 over 0 ticks")
+	(camera_set_field_of_view 60 0)
+
+	(sleep 19)
+	(print "fov change: 60 -> 70 over 0 ticks")
+	(camera_set_field_of_view 70 0)
+
+	)
+
 ; SOUND ---------------------------------------------------------------
 
 (script dormant x07_foley_06
@@ -1251,6 +1321,8 @@
 ; ---------------------------------------------------------------------
 
 (script static void x07_06_setup
+
+	(wake x07_fov_06)
 
 	(wake x07_foley_06)
 	(wake x07_0200_tar)

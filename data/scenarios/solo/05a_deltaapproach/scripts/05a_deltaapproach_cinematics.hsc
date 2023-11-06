@@ -347,6 +347,13 @@
 
 	)
 
+(script dormant x05_effect_shake_01_bridge
+	(print "shake")
+	(player_effect_set_max_rotation 0 1 1)
+	(player_effect_start 0.5 0)
+	(player_effect_stop 2)
+	)
+
 ; ---------------------------------------------------------------------
 
 (script static void x05_02_setup
@@ -402,6 +409,7 @@
 	(wake x05_light_scene_02_bridge_1)
 	(wake x05_light_scene_02_hev_1)
 	(wake x05_light_scene_02_bridge_2)
+	(wake x05_effect_shake_01_bridge)
 
 	)
 
@@ -1046,6 +1054,17 @@
 	)
 
 ; X05 SCENE 08 --------------------------------------------------------
+(script dormant x05_fov_08
+	(sleep 172)
+	(camera_set_field_of_view 20 0)
+	(print "fov change: 60 -> 20 over 0 ticks")
+
+	(sleep 30)
+	(camera_set_field_of_view 60 15)
+	(print "fov change: 20 -> 60 over 15 ticks")
+
+	)
+
 ; SOUND ---------------------------------------------------------------
 
 (script dormant x05_foley_08
@@ -1127,6 +1146,7 @@
 	(wake x05_0310_cor)
 
 	(wake x05_foley_08)
+	(wake x05_fov_08)
 
 	(wake destroy_chief)
 

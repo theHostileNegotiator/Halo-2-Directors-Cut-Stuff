@@ -1247,6 +1247,18 @@
 	)
 
 ; C06_INTRO SCENE 02 --------------------------------------------------
+; EFFECTS & LIGHTING --------------------------------------------------
+(script dormant c06_intro_fov_02
+
+	(sleep 428)
+	(print "fov change: 60 -> 40 over 0 ticks")
+	(camera_set_field_of_view 40 0)
+	(sleep 162)
+	(print "fov change: 40 -> 60 over 0 ticks")
+	(camera_set_field_of_view 60 0)
+
+	)
+
 ; SOUND ---------------------------------------------------------------
 
 (script dormant c06_intro_sound_scene2_01
@@ -1435,6 +1447,7 @@
 	(wake c06_intro_sound_scene2_03)
 
 	(wake c06_intro_foley_02)
+	(wake c06_intro_fov_02)
 
 	(wake c06_1120_tar)
 	(wake c06_1130_tar)

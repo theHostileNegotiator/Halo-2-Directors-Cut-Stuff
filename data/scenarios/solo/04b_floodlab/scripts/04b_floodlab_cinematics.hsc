@@ -172,9 +172,11 @@
 	(device_group_change_only_once_more_set 04_intra0 false)
 	(device_set_position arm_02_entry_ext 0)
 
-	(sleep (- (camera_time) 15))
+	(sleep (- (camera_time) 30))
 
 	(fade_out 1 1 1 15)
+	
+	(sleep 15)
 
 	(object_destroy_containing intra0)
 
@@ -266,6 +268,12 @@
 
 	)
 
+(script dormant c04_fov_01
+	(sleep 278)
+	(camera_set_field_of_view 50 0)
+	(print "fov change: 60 -> 50 over 0 ticks")
+	)
+
 (script static void c04_intra1_01_setup
 
 	(object_create_anew dervish02)
@@ -277,6 +285,7 @@
 	(cinematic_clone_players_weapon dervish02 "left_hand_elite" "")
 
 	(wake c04_intra1_foley_01)
+	(wake c04_fov_01)
 
 	(wake c04_2010_her)
 	(wake c04_2020_her)
@@ -297,7 +306,7 @@
 	(cinematic_start_movie "floodlab_intra1")
 	(cinematic_start)
 	(set cinematic_letterbox_style 1)
-	(camera_set_field_of_view 70 0)
+	(camera_set_field_of_view 60 0)
 
 	(cinematic_lightmap_shadow_enable)
 
@@ -397,9 +406,24 @@
 
 	)
 
+(script dormant c04_fov_02
+	(sleep 49)
+	(camera_set_field_of_view 60 0)
+	(print "fov change: 50 -> 60 over 0 ticks")
+
+	(sleep 287)
+	(camera_set_field_of_view 70 0)
+	(print "fov change: 60 -> 70 over 0 ticks")
+
+	(sleep 146)
+	(camera_set_field_of_view 50 0)
+	(print "fov change: 70 -> 50 over 0 ticks")
+	)
+
 (script static void c04_intra1_02_setup
 
 	(wake c04_intra1_foley_02)
+	(wake c04_fov_02)
 
 	(wake c04_2031_soc)
 	(wake c04_2040_soc)

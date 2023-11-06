@@ -247,6 +247,18 @@
 
 	)
 
+(script dormant c03_intro_fov_01
+
+	(sleep 558)
+	(camera_set_field_of_view 45 0)
+	(print "fov change: 60 -> 45 over 0 ticks")
+	
+	(sleep 143)
+	(camera_set_field_of_view 60 0)
+	(print "fov change: 45 -> 60 over 0 ticks")
+
+	)
+
 ; PROBLEM ACTORS ------------------------------------------------------
 
 (script static void c03_intro_01_problem_actors
@@ -303,6 +315,7 @@
 
 	(wake c03_intro_score_01)
 	(wake c03_intro_foley_01)
+	(wake c03_intro_fov_01)
 
 	(wake c03_intro_sound_scene1_01)
 	(wake c03_intro_sound_scene1_02)
@@ -535,7 +548,7 @@
 	(player_effect_stop 1.5)
 	)
 
-(script dormant c03_intro_fov_01
+(script dormant c03_intro_fov_02
 
 ;	(sleep 322)
 	(sleep 232)
@@ -612,7 +625,7 @@
 	(wake erase_hogs)
 
 	(wake c03_intro_shake_02)
-	(wake c03_intro_fov_01)
+	(wake c03_intro_fov_02)
 	(wake cinematic_lighting_scene_02)
 
 	(wake white_flash)
@@ -1099,7 +1112,7 @@
 	(cinematic_subtitle c03_1160_dp2 2)
 	)
 
-(script dormant c03_intro_fov_02
+(script dormant c03_intro_fov_04
 
 	(sleep 382)
 	(camera_set_field_of_view 30 0)
@@ -1188,7 +1201,7 @@
 
 	(wake c03_1160_dp2)
 
-	(wake c03_intro_fov_02)
+	(wake c03_intro_fov_04)
 ;	(wake c03_intro_04_dof_1)
 ;	(wake c03_intro_04_dof_3)
 	(wake c03_intro_shake_04)

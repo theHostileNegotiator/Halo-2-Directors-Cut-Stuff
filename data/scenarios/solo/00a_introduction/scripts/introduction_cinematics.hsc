@@ -1079,7 +1079,16 @@
 
 (script dormant x01_08_fov
 
-	(sleep 689)
+	(sleep 159)
+	(camera_set_field_of_view 50 0)
+	(print "fov change: 60 -> 50 over 0 ticks")
+
+	(sleep 118)
+	(camera_set_field_of_view 60 0)
+	(print "fov change: 60 -> 50 over 0 ticks")
+
+	;(sleep 689)
+	(sleep 412)
 	(camera_set_field_of_view 38 0)
 	(print "fov change: 60 -> 38 over 0 ticks")
 

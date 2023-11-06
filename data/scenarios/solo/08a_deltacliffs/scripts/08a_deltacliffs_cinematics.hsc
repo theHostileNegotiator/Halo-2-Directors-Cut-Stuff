@@ -195,6 +195,17 @@
 
 	)
 
+(script dormant c08_intra1_shake_01
+
+	(sleep 249)
+	(print "shake")
+	(player_effect_set_max_rotation 0 0.35 0.35)
+	(player_effect_start .25 0)
+	(sleep 142)
+	(print "stop shake")
+	(player_effect_stop 0.5)
+	)
+
 ; ---------------------------------------------------------------------
 
 (script static void c08_intra1_01_setup
@@ -215,6 +226,7 @@
 
 	(wake c04_intra1_dof_01)
 	(wake cinematic_lighting_intra1_01)
+	(wake c08_intra1_shake_01)
 
 	)
 
@@ -260,6 +272,25 @@
 	)
 
 ; C08_INTRA1 SCENE 02 -------------------------------------------------
+; EFFECTS & LIGHTING --------------------------------------------------
+
+(script dormant c08_intra1_shake_02
+
+	(sleep 281)
+	(print "shake")
+	(player_effect_set_max_rotation 0 1 1)
+	(player_effect_start .25 0)
+	(player_effect_stop 0.5)
+
+	(sleep 28)
+	(time_code_reset)
+	(player_effect_set_max_rotation 0 1 1)
+	(player_effect_start .25 0)
+	(sleep 26)
+	(player_effect_stop 0)
+
+	)
+
 ; SOUND ---------------------------------------------------------------
 
 (script dormant c08_intra1_sound_scene2_01
@@ -356,6 +387,7 @@
 	(wake c08_2030_soc)
 
 ;	(wake c04_intra1_dof_02)
+	(wake c08_intra1_shake_02)
 	(wake cinematic_lighting_intra1_02)
 
 	)
@@ -395,6 +427,26 @@
 	)
 
 ; C08_INTRA1 SCENE 03 -------------------------------------------------
+; EFFECTS & LIGHTING --------------------------------------------------
+
+(script dormant c08_intra1_shake_03
+	
+	(print "shake")
+	(player_effect_set_max_rotation 0 0.5 0.5)
+	(player_effect_start .25 0)
+	(sleep 94)
+	(print "stop shake")
+	(player_effect_stop 1.5)
+	)
+
+(script dormant c08_intra1_fov_03
+
+	(sleep 245)
+	(print "fov change: 50 -> 40 over 0 ticks")
+	(camera_set_field_of_view 40 0)
+
+	)
+
 ; SOUND ---------------------------------------------------------------
 
 (script dormant c08_intra1_sound_scene3_01
@@ -506,6 +558,8 @@
 
 	(wake c08_intra1_sound_scene3_01)
 	(wake c08_intra1_foley_03)
+	(wake c08_intra1_shake_03)
+	(wake c08_intra1_fov_03)
 	(wake c08_2040_tar)
 
 	(wake cinematic_lighting_intra1_03)

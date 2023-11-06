@@ -285,6 +285,21 @@
 
 	)
 
+(script dormant c08_intra2_fov_01
+
+	(camera_set_field_of_view 45 122)
+	(print "fov change: 60 -> 45 over 122 ticks")
+
+	(sleep 122)
+	(camera_set_field_of_view 40 71)
+	(print "fov change: 45 -> 40 over 71 ticks")
+
+	(sleep 177)
+	(camera_set_field_of_view 60 0)
+	(print "fov change: 40 -> 60 over 0 ticks")
+
+	)
+
 ; PROBLEM ACTORS ------------------------------------------------------
 
 (script static void c08_intra2_problem_actors
@@ -327,6 +342,7 @@
 	(wake c08_3030_jon)
 	(wake c08_3040_der)
 
+	(wake c08_intra2_fov_01)
 ;	(wake x04_01_dof_1)
 
 	(wake scarab_shake)
@@ -971,6 +987,26 @@
 	)
 
 ; C08_INTRA3 SCENE 04 -------------------------------------------------
+; EFFECTS & LIGHTING --------------------------------------------------
+(script dormant c08_intra3_fov_04
+
+	(print "fov change: 60 -> 50 over 187 ticks")
+	(camera_set_field_of_view 50 187)
+	
+	(sleep 187)
+	(print "fov change: 50 -> 60 over 0 ticks")
+	(camera_set_field_of_view 60 0)
+
+	(sleep 185)
+	(print "fov change: 60 -> 50 over 0 ticks")
+	(camera_set_field_of_view 50 0)
+
+	(sleep 251)
+	(print "fov change: 50 -> 60 over 0 ticks")
+	(camera_set_field_of_view 60 0)
+
+	)
+
 ; SOUND ---------------------------------------------------------------
 
 (script dormant c08_intra3_foley_04
@@ -1026,6 +1062,7 @@
 	(wake c08_4300_der)
 
 ;	(wake x04_01_dof_1)
+	(wake c08_intra3_fov_04)
 
 	)
 
@@ -1109,6 +1146,25 @@
 
 	)
 
+(script dormant c08_intra3_fov_05
+
+	(sleep 95)
+	(print "fov change: 60 -> 50 over 0 ticks")
+	(camera_set_field_of_view 50 0)
+	(time_code_reset)
+	
+	(sleep 116)
+	(print "fov change: 50 -> 60 over 0 ticks")
+	(camera_set_field_of_view 60 0)
+	(time_code_reset)
+	
+	(sleep 147)
+	(print "fov change: 60 -> 50 over 0 ticks")
+	(camera_set_field_of_view 50 0)
+
+	)
+
+
 ; ---------------------------------------------------------------------
 
 (script dormant index_insertion
@@ -1135,6 +1191,7 @@
 	(wake index_insertion)
 
 ;	(wake x04_01_dof_1)
+	(wake c08_intra3_fov_05)
 
 	(wake cinematic_lighting_intra3_05)
 
@@ -1193,6 +1250,13 @@
 	)
 
 ; C08_INTRA3 SCENE 06 -------------------------------------------------
+; EFFECTS & LIGHTING --------------------------------------------------
+(script dormant c08_intra3_fov_06
+
+	(print "fov change: 60 -> 50 over 187 ticks")
+	(camera_set_field_of_view 50 187)
+	)
+
 
 (script dormant create_lift
 
@@ -1998,6 +2062,8 @@
 	(object_cinematic_lod forerunner_ship true)
 	(object_cinematic_lod matte_earth true)
 	(object_cinematic_lod matte_moon true)
+
+	(effect_new_on_object_marker effects\objects\cinematics\forerunner_ship\thruster_scale01 forerunner_ship "thruster")
 
 	(wake x09_foley_7)
 
