@@ -179,6 +179,10 @@
 
 	(object_create_anew rifle_01)
 
+	(object_create_anew bus_fire)
+	(object_create_anew intro_flak_01)
+	(object_create_anew intro_flak_02)
+
 	(object_cinematic_lod chief true)
 	(object_cinematic_lod johnson true)
 
@@ -351,6 +355,9 @@
 	(sleep (camera_time))
 
 	(object_destroy pelican_01a)
+	(object_destroy bus_fire)
+	(object_destroy intro_flak_01)
+	(object_destroy intro_flak_02)
 
 	)
 

@@ -672,7 +672,10 @@
 (script static void c05_outro_01_setup
 
 	(object_create_anew carrier)
+	(object_create_anew outro_rifle)
 	(object_cinematic_lod carrier true)
+
+	(objects_attach chief "right_hand" outro_rifle "")
 
 	(wake c05_outro_score_01)
 	(wake c05_outro_foley_01)
@@ -744,9 +747,21 @@
 
 ; ---------------------------------------------------------------------
 
+(script dormant c05_outro_02_drop_weapon
+	(sleep 67)
+	(print "drop weapon")
+	(objects_detach chief outro_rifle)
+	(object_destroy outro_rifle)
+	(object_create_anew outro_rifle_dropped)
+	
+	(sleep 150)
+	(object_destroy outro_rifle_dropped)
+	)
+
 (script static void c05_outro_scene_02
 
 	(wake c05_outro_foley_02)
+	(wake c05_outro_02_drop_weapon)
 	(wake effect_dust_land)
 
 	(camera_set_animation_relative objects\characters\cinematic_camera\05_outro\05_outro "05_outro_02" none "anchor_flag_outro")

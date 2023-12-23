@@ -393,6 +393,8 @@
 	(object_uses_cinematic_lighting ehg_10 1)
 	(object_uses_cinematic_lighting ehg_11 1)
 	(object_uses_cinematic_lighting ehg_12 1)
+	(object_uses_cinematic_lighting ehg_13 1)
+	(object_uses_cinematic_lighting ehg_14 1)
 
 	(object_uses_cinematic_lighting throne_mercy 1)
 	(object_uses_cinematic_lighting throne_regret 1)

@@ -790,7 +790,8 @@
 	(set g_music_07a_02 1)
 	(if dialogue (print "CORTANA: Right this way chief!"))
 	(sleep (ai_play_line_at_player cortana_0 2060))
-	(device_one_sided_set grand_a_exit false)
+	(device_operates_automatically_set grand_a_exit 1)
+	;(device_one_sided_set grand_a_exit false)
 	
 	(sleep_until (volume_test_objects tv_dervish_ledge_fr (players)))
 	(sleep 30)

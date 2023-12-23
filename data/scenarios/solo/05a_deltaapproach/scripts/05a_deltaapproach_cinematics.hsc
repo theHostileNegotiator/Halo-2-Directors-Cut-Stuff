@@ -1502,6 +1502,8 @@
 	)
 	)
 
+	(object_destroy intro_plasmapistol_1)
+
 	)
 
 ; SOUND ---------------------------------------------------------------
@@ -1576,6 +1578,7 @@
 ; ---------------------------------------------------------------------
 
 (script dormant jackal_shield_activate
+	(objects_attach jackal_01 "left_hand_jackal" intro_plasmapistol_2 "")
 	(sleep 278)
 	(print "jackal shield activate")
 	(object_create_anew jackal_shield)
@@ -1596,6 +1599,8 @@
 
 	(object_create_anew grunt_01)
 	(object_create_anew jackal_01)
+	(object_create_anew intro_plasmapistol_1)
+	(object_create_anew intro_plasmapistol_2)
 	(object_create_anew intro_turret)
 
 	(object_cinematic_lod hev_close_01 true)
@@ -1815,6 +1820,7 @@
 	(object_destroy_containing turret)
 	(object_destroy rocket_01)
 	(object_destroy smg_01)
+	(object_destroy_containing intro_plasmapistol)
 
 	(object_destroy_containing hev_close)
 

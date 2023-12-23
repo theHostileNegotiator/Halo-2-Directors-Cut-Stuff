@@ -2169,6 +2169,7 @@
 	(object_destroy infection_form_02)
 	(object_destroy hammer)
 	(object_destroy_containing intra_pike)
+	(object_destroy_containing intra1_crate)
 
 	)
 

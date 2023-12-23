@@ -110,6 +110,8 @@
 	(object_cinematic_lod phantom_01 true)
 	(object_cinematic_lod phantom_02 true)
 	(object_cinematic_lod phantom_03 true)
+	(object_cinematic_lod cov_antennae_01 true)
+	(object_cinematic_lod cov_antennae_02 true)
 
 	(wake c07_intra1_05_dof_01)
 	(wake c07_intra1_cinematic_light_01)

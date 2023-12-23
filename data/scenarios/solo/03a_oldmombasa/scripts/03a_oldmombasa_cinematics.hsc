@@ -227,6 +227,10 @@
 	(object_destroy iac_bridge)
 	(print "destroy miranda, iac bridge")
 
+	(object_create_anew cityfire_01)
+	(object_create_anew cityfire_02)
+	(print "create fire")
+
 ;	(print "light approach")
 
 	(cinematic_lighting_set_primary_light 43 122 0.54902 0.478431 0.34902)
@@ -238,6 +242,15 @@
 (script dormant cinematic_light_01_pelican_02
 
 	(sleep 558)
+
+	(object_destroy cityfire_01)
+	(object_destroy cityfire_02)
+	(object_create_anew cityfire_03)
+	(object_create_anew cityfire_04)
+	(object_create_anew citysmoke_01)
+	(object_create_anew citysmoke_02)
+
+	(print "create fire")
 
 	(print "light pelican")
 
@@ -466,6 +479,12 @@
 	(sleep 146)
 ;	(sleep 146)
 
+	(object_destroy cityfire_03)
+	(object_destroy cityfire_04)
+	(object_destroy citysmoke_01)
+	(object_destroy citysmoke_02)
+	(object_create_anew highwayfire_01)
+
 	(ai_place intro_hog_01)
 	(ai_place intro_hog_02)
 	(ai_place intro_hog_03)
@@ -586,6 +605,8 @@
 (script dormant erase_hogs
 	(time_code_reset)
 	(sleep 279)
+	(object_destroy highwayfire_01)
+
 	(print "erase hogs")
 	(ai_erase intro_hog_01)
 	(ai_erase intro_hog_02)
@@ -778,6 +799,8 @@
 
 (script dormant cinematic_lighting_scene_03
 
+	(object_create_anew highwayfire_02)
+
 	(cinematic_lighting_set_primary_light 29 116 0.478431 0.415686 0.329412)
 	(cinematic_lighting_set_secondary_light 20 272 0.235294 0.235294 0.384314)
 	(cinematic_lighting_set_ambient_light 0 0 0)
@@ -800,6 +823,8 @@
 	(object_hide odst_01 false)
 	(object_hide odst_02 false)
 	(object_hide odst_03 false)
+	
+	(object_destroy highwayfire_02)
 
 	(cinematic_lighting_set_primary_light 4 278 0.54902 0.478431 0.34902)
 	(cinematic_lighting_set_secondary_light -34 154 0.14902 0.141176 0.180392)
@@ -825,6 +850,8 @@
 
 	(sleep 403)
 	(print "light street")
+
+	(object_create_anew highwayfire_03)
 
 	(cinematic_lighting_set_primary_light 43 122 0.54902 0.478431 0.34902)
 	(cinematic_lighting_set_secondary_light -25 98 0.317647 0.313726 0.396078)
@@ -975,6 +1002,7 @@
 	(object_destroy battle_rifle_02)
 	(object_destroy sniper_rifle)
 	(object_destroy magazine)
+	(object_destroy highwayfire_03)
 
 	)
 

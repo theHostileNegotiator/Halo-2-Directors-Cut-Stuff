@@ -3341,6 +3341,11 @@
 	(object_create_anew airlock_debris_01)
 	(object_create_anew airlock_debris_02)
 
+	(object_create_anew outro_redlightrotate_01)
+	(object_create_anew outro_redlightrotate_02)
+	(object_create_anew outro_redlightrotate_03)
+	(object_create_anew outro_redlightrotate_04)
+	
 	(wake c01_outro_music_06)
 	(wake c01_outro_foley_06)
 	(wake c01_outro_fov_06)
@@ -3358,6 +3363,7 @@
 	(object_destroy matte_earth)
 	(object_destroy pickle)
 	(object_destroy_containing airlock_debris)
+	(object_destroy_containing outro_redlightrotate)
 
 	)
 

@@ -1,0 +1,121 @@
+Object Placements are approximations only
+
+
+Introduction
+BSP:high_0
+Scenery Objects
+ - objects\characters\elite\elite_honor_guard\elite_honor_guard.scenery
+    - elc_31: Rename to egh_13
+    - elc_32: Rename to egh_14
+
+SpaceStation
+BSP:01_bsp_3
+Scenery Objects
+ - scenarios\objects\solo\earthcity\light_red_rotate\light_red_rotate.scenery
+    - outro_redlightrotate_01: New Object Pos x:-7.99976, y:3.49628, z:-33.7989, Rotation y:180, p:0, r:0
+       - Flags: Not Automatically
+    - outro_redlightrotate_02: New Object Pos x:-4.03025, y:3.5022, z:-33.6488, Rotation y:0, p:0, r:0
+       - Flags: Not Automatically
+    - outro_redlightrotate_03: New Object Pos x:-0.470694, y:6.49442, z:-33.2202, Rotation y:0, p:90, r:0
+       - Flags: Not Automatically
+    - outro_redlightrotate_04: New Object Pos x:-4.92029, y:0.493637, z:-33.2202, Rotation y:0, p:90, r:0
+       - Flags: Not Automatically
+
+
+OldMombasa
+BSP:earthcity_cine_intro_bsp
+Scenery Objects
+ - effects\scenery\fires\fire_basic_smoky_large.scenery
+    - cityfire_01: New Object Pos x:-4.17467, y:-95.2631, z:-61.2285, Rotation y:0, p:0, r:0
+       - Flags: Not Automatically
+    - cityfire_04: New Object Pos x:9.9858, y:-85.8064, z:-63.2285, Rotation y:0, p:0, r:0
+       - Flags: Not Automatically
+    - highwayfire_01: New Object Pos x:10.4697, y:-135.383, z:4.20024, Rotation y:0, p:0, r:0
+       - Flags: Not Automatically
+    - highwayfire_02: New Object Pos x:18.6151, y:-144.408, z:4.79581, Rotation y:0, p:0, r:0
+       - Flags: Not Automatically
+    - highwayfire_03: New Object Pos x:-1.32123, y:-167.799, z:8.30027, Rotation y:0, p:0, r:0
+       - Flags: Not Automatically
+ - effects\scenery\fires\fire_basic_smoky_enormous.scenery
+    - cityfire_02: New Object Pos x:11.3858, y:-85.8264, z:-63.8285, Rotation y:0, p:0, r:0
+       - Flags: Not Automatically
+    - cityfire_03: New Object Pos x:0.556995, y:-91.89, z:-59.6285, Rotation y:0, p:0, r:0
+       - Flags: Not Automatically
+ - effects\scenarios\solo\earthcity\pelican_crash_smoke.scenery
+    - citysmoke_01: New Object Pos x:3.20051, y:-86.649, z:-63.3285, Rotation y:0, p:0, r:0
+       - Flags: Not Automatically
+    - citysmoke_02: New Object Pos x:9.30114, y:-102.397, z:-48.0849, Rotation y:0, p:0, r:0
+       - Flags: Not Automatically
+
+NewMombasa
+BSP:earthcity_3b
+Scenery Objects
+ - effects\scenery\fires\fire_basic_smoky_enormous.scenery
+    - No Name: New Object Pos x:-300.196, y:315.909, z:1.0466, Rotation y:0, p:0, r:0
+ - effects\scenery\fires\fire_smoky_large.scenery
+    - No Name: New Object Pos x:-259.497, y:318.432, z:7.14983, Rotation y:0, p:0, r:0
+    - bus_fire: New Object Pos x:-280.941, y:323.299, z:4.28278, Rotation y:0, p:0, r:0
+       - Flags: Not Automatically
+ - effects\cinematics\c01_outro\human_and_cov_firing_cine.scenery
+    - intro_flak_01: New Object Pos x:-362.905, y:317.049, z:17.8375, Rotation y:0, p:0, r:0
+       - Flags: Not Automatically
+    - intro_flak_02: New Object Pos x:-12.7528, y:319.579, z:36.3913, Rotation y:0, p:0, r:0
+       - Flags: Not Automatically
+
+DeltaApproach
+BSP:bsp_00
+Scenery Objects
+ - objects\weapons\pistol\plasma_pistol\plasma_pistol.scenery
+    - intro_plasmapistol_1: New Object Pos x:-279.532, y:-264.389, z:42.8939, Rotation y:0, p:0, r:90
+       - Flags: Not Automatically
+    - intro_plasmapistol_2: New Object Pos x:-279.362, y:-264.727, z:42.8604, Rotation y:0, p:0, r:0
+       - Flags: Not Automatically
+
+DeltaTowers
+BSP:
+Scenery Objects
+ - objects\weapons\rifle\battle_rifle\battle_rifle.scenery
+    - outro_rifle: New Object Pos x:6.75597, y:139.697, z:13.8, Rotation y:0, p:0, r:0
+    - outro_rifle_dropped: New Object Pos x:2.142862, y:141.475, z:13.807, Rotation y:0, p:57.1658, r:-90
+
+HighCharity
+BSP:high_0
+Devices\Machines
+ - scenarios\objects\solo\highcharity\high_door_grand\high_door_grand.scenery
+    - grand_a_exit: ADD Flags: Does not operate automatically. REMOVE Flags: one-sided
+BSP:high_5
+Crate Objects
+ - objects\gear\covenant\military\antennae_comm\antennae_comm.crate
+    - No Name: New Object Pos x:556.664, y:-147.445, z:-22.6412, Rotation y:21.602, p:0, r:0
+    - No Name: New Object Pos x:545.41, y:-147.465, z:-22.6412, Rotation y:-144.304, p:-0.475971, r:0.0116341
+ - objects\gear\covenant\military\crate_space\crate_space.crate
+    - intra1_crate_01: New Object Pos x:548.86, y:-139.362, z:-22.3812, Rotation y:-0.0691767, p:30.0737, r:87.8749
+    - intra1_crate_02: New Object Pos x:546.889, y:-141.275, z:-22.6412, Rotation y:-66.1343, p:0, r:0
+    - intra1_crate_03: New Object Pos x:545.702, y:-142.666, z:-22.3812, Rotation y:-180, p:-48.6745, r:-90
+    - intra1_crate_04: New Object Pos x:554.173, y:-146.205, z:-22.3812, Rotation y:-2.59478, p:0.0176579, r:-90
+    - No Name: New Object Pos x:547.128, y:-147.271, z:-22.6412, Rotation y:-56.8547, p:0, r:0
+    - No Name: New Object Pos x:555.402, y:-147.537, z:-22.6412, Rotation y:10.6022, p:0.0142171, r:0.0167158
+    - No Name: New Object Pos x:546.497, y:-143.407, z:-22.3812, Rotation y:0, p:-53.4608, r:90
+    - No Name: New Object Pos x:546.372, y:-146.909, z:-22.3812, Rotation y:179.719, p:-0.835622, r:-89.4906
+ - objects\gear\covenant\military\crate_space_a\crate_space_a.crate
+    - intra1_crate_05: New Object Pos x:556.465, y:-146.608, z:-22.6412, Rotation y:-2.59477, p:0.0176579, r:0.0130285
+    - No Name: New Object Pos x:552.669, y:-138.845, z:-22.6412, Rotation y:0, p:0, r:0
+    - No Name: New Object Pos x:548.938, y:-138.516, z:-22.6412, Rotation y:0, p:0, r:0
+
+ForerunnerShip
+BSP:high_5
+Crate Objects
+ - objects\gear\covenant\military\battery\battery.crate
+    - No Name
+       - Location: Pos x:545.805, y:-149.415, z:-22.6412, Rotation y:-122.094, p:0, r:0
+       - Change Object Type to objects\gear\covenant\military\antennae_comm\antennae_comm.crate
+       - Change Name: cov_antennae_01
+    - No Name
+       - Location: Pos x:557.039, y:-148.334, z:-22.6319, Rotation y:28.2969, p:-0.0248094, r:-0.0215688
+       - Change Object Type to objects\gear\covenant\military\antennae_comm\antennae_comm.crate
+       - Change Location: Pos x:556.719, y:-149.536, z:-22.6412, Rotation y:4.51031, p:0, r:0
+       - Change Name: cov_antennae_02
+ - scenarios\objects\covenant\residential\civilian_cov_crate\civilian_cov_crate.crate
+    - No Name
+       - Location: Pos x:551.438, y:-140.407, z:-22.3804, Rotation y:0.0668464, p:-0.0142617, r:90.0078
+       - Change Location: Pos x:551.438, y:-141.147, z:-22.3804, Rotation y:0.0668464, p:-0.0142617, r:90.0078
