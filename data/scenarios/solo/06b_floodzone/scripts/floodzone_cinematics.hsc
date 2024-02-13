@@ -316,6 +316,7 @@
 
 	(scenery_animation_start_relative key_intra2_01 scenarios\objects\solo\sentinelhq\key_cine\06_intra2\06_intra2 "intra2_dervishkey_01" anchor_intra2)
 	(scenery_animation_start_relative key_intra2_02 scenarios\objects\solo\sentinelhq\key_cine\06_intra2\06_intra2 "intra2_humankey_01" anchor_intra2)
+	(scenery_animation_start_relative iac objects\cinematics\human\inamberclad\06_intra2\06_intra2 "iac_01" anchor_intra2)
 
 	(fade_in 1 1 1 15)
 
@@ -395,6 +396,7 @@
 
 	(scenery_animation_start_relative key_intra2_01 scenarios\objects\solo\sentinelhq\key_cine\06_intra2\06_intra2 "intra2_dervishkey_02" anchor_intra2)
 	(scenery_animation_start_relative key_intra2_02 scenarios\objects\solo\sentinelhq\key_cine\06_intra2\06_intra2 "intra2_humankey_02" anchor_intra2)
+	(scenery_animation_start_relative iac objects\cinematics\human\inamberclad\06_intra2\06_intra2 "iac_02" anchor_intra2)
 
 ; 	PREDICTION ->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 	(sleep (- (camera_time) prediction_offset))
@@ -484,6 +486,7 @@
 	(custom_animation_relative phantom_01 objects\vehicles\phantom\animations\06_intra2\06_intra2 "phantom_03" false anchor_intra2)
 
 	(scenery_animation_start_relative key_intra2_01 scenarios\objects\solo\sentinelhq\key_cine\06_intra2\06_intra2 "intra2_dervishkey_03" anchor_intra2)
+	(scenery_animation_start_relative iac objects\cinematics\human\inamberclad\06_intra2\06_intra2 "iac_03" anchor_intra2)
 
 	(sleep (- (camera_time) 15))
 
